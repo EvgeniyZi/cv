@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin-top: 5vh;
+}
+
+.wrapper {
+    min-width: 500px;
+    max-width: 700px;
+    width: 90vw;
+    margin: 0 auto;
+    background: rgb(224, 224, 224);
+}
+
+.game-name {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.timer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    min-height: 40px;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.box-grid {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.game-grid {
+    display: grid;
+    border: 2px solid black;
+}
+
+.cell {
+    background-color: white;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.active {
+    background-color: black;
+}
+
+.top-hints {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 5px;
+}
+
+.left-hints {
+    display: grid;
+    margin-right: 5px;
+    align-items: center;
+}
+
+.main-grid-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hint {
+    width: 30px;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 14px;
+    /* border: 1px solid black; */
+}
+
+.vertical-hint {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    white-space: pre-line;
+}
+
+.horizon-hint {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.game-message {
+    min-height: 40px;
+}
+
+.win-message {
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.game-controls {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    gap: 20px;
+}
+
+.button-restart {
+    font-size: 20px;
+    padding: 5px;
+}

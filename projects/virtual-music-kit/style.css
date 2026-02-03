@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+}
+
+html{
+    height: 90%;
+}
+
+body {
+    margin: 40px auto;
+    max-width: 1440px;
+    /* border: 1px solid gray; */
+    height: 100%;
+}
+
+.keyboard {
+    position: relative;
+    margin: auto;
+    width: 800px;
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    height: 300px;
+    max-height: 100%;
+    user-select: none;
+}
+
+.white-key {
+    flex: 1;  
+    background-color: rgb(252, 252, 242);
+    border: 1px solid rgb(37, 37, 37);
+    border-radius: 0 0 1em 1em;
+    transition: 0.1s;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.white-key:hover span {
+    cursor: pointer;
+    /* background-color: rgba(238, 238, 226, 1); */
+    color: rgb(212, 97, 82);
+    transition: 0.1s;
+}
+
+.press-white {
+    background-color: rgba(255, 244, 180, 1);
+    border: 1px solid rgba(139, 139, 139, 1);
+}
+
+.white-key span {
+    margin-bottom: 20%;
+    color: rgba(0, 0, 0, 0.39);
+}
+
+.box_black-key {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    z-index: 1;
+    height: 55%;
+    width: 100%;
+    /* border: 1px solid rgba(255, 21, 21, 0.452); */
+    padding: 0 10.48%;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+.black-key:nth-child(3) {
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.black-key {
+    display: flex;
+    height: 100%;
+    width: 9.52%;
+    background-color: black;
+    border-radius: 0 0 1em 1em;
+    transition: 0.1s;
+    pointer-events: auto;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.black-key:hover span {
+    /* background-color: rgba(59, 59, 59, 1); */
+    color: rgb(198, 157, 24);
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.press-black {
+    background-color: rgba(65, 38, 38, 1);
+    border: 2px solid rgba(255, 234, 214, 1);
+}
+
+.black-key span {
+    margin-bottom: 40%;
+    color: rgba(253, 250, 242, 0.521);
+}
+
+.control-panel {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 20px;
+    row-gap: 20px;
+}
+
+.button-key-editor {
+    height: 30px;
+    width: 100px;
+}
+
+.active {
+    background-color: red;
+    color: white;
+}

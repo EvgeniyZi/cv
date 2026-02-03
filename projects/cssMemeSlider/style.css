@@ -1,0 +1,140 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Arial";
+    font-weight: normal;
+    font-style: normal;
+    src: url("../cssMemeSlider/assets/fonts/arial/arial-regular.ttf")
+}
+
+p {
+    font-family: Arial, sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.15rem;
+}
+
+.up {
+    height: 3vw;
+}
+
+.container {
+    max-width: 1024px;
+    width: 90vw;
+    height: auto;
+    background-color: rgb(33, 33, 33);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: auto;
+    border-radius: 2vw;
+}
+
+.slider {
+    max-height: 768px;
+    margin: 30px 30px;
+    overflow: hidden;
+    display: flex;
+    border: 1px solid rgb(123, 120, 120);
+    box-shadow: 0 0 15px 3px rgb(64 64 64);
+    border-radius: 2vw;
+}
+
+.images {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    height: auto;
+}
+
+.img-slider {
+    min-width: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    background-color: rgb(44, 44, 44);
+}
+
+.control-comment {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 40px 30px;
+    height: auto;
+    flex-direction: row-reverse;
+    min-height: 30px;
+}
+
+.button {
+    display: flex;
+    gap: 0.7rem;
+}
+
+.button_span {
+    display: inline-block;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    border: 3px solid rgb(168, 164, 164);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button_span:hover {
+    border: 3px solid white;
+    transition: 0.3s;
+}
+
+.button_span::after {
+    display: flex;
+    content: '';
+    transform: translate(-25%, -40%);
+    width: 30px;
+    height: 60px;
+}
+
+.button_span.active {
+    border: 3px solid white;
+    background: rgb(145, 145, 144);
+    transition: 0.3s;
+}
+
+.comment {
+    color: white;
+}
+
+.comment p {
+    opacity: 0;
+    height: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease;
+}
+
+.comment p.active {
+    opacity: 1;
+    height: auto;
+    visibility: visible;    
+}
+
+@media (max-width: 1024px) {
+    .control-comment {
+        margin: 0 4vw 30px;
+    }
+}
+
+@media (max-width: 568px) {
+
+    .control-comment {
+        flex-direction: column;
+        margin: 0 8vw 10vw 8vw;
+        height: auto;
+        gap: 30px;
+    }
+
+    .comment {
+        width: 100%;
+    }
+}
